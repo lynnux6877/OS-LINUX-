@@ -1,6 +1,7 @@
 import discord
 import openai
 from dotenv import load_dotenv
+from keep_alive import keep_alive
 from discord.ext import commands
 import os
 
@@ -57,5 +58,5 @@ async def on_message(message):
     
     await bot.process_commands(message)
 
-
+keep_alive()
 bot.run(DISCORD_BOT_TOKEN)
