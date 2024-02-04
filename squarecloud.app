@@ -1,0 +1,5 @@
+DISPLAY_NAME=Seu ChatGPT Bot
+MAIN=main.py
+MEMORY=128
+VERSION=recommended
+DESCRIPTION=Seu ChatGPT Bot
