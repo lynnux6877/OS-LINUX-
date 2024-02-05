@@ -35,7 +35,7 @@ def ask_gpt(mensagens):
         messages=mensagens,
         model="gpt-3.5-turbo-16k",
         temperature=0.9,
-        max_tokens=150
+        max_tokens=1000
     )
 
     return response.choices[0].message.content
