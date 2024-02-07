@@ -18,10 +18,6 @@ intents = discord.Intents.all()
 intents.messages = True
 client = discord.Client(intents=intents)
 
-@bot.event
-async def on_ready():
-    print(f"O {bot.user.name} ficou ligado!")
-    await bot.change_presence(activity=discord.CustomActivity(emoji="👉",name="CONECTADO E FUNCIONANDO"))
     
 # Configuração da API do OpenAI
 openai.api_key = OPENAI_API_KEY
@@ -56,6 +52,7 @@ async def on_message(message):
             # Envia a resposta para o canal do Discord
             await message.channel.send(response)
 
+    
 keep_alive()
 # Conecta o bot ao Discord
 client.run(TOKEN)
