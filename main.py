@@ -1,6 +1,7 @@
 import discord
 import openai
 from discord.ext import commands
+from keep_alive import keep_alive
 from PERSONAcreate import OS
 import os
 
@@ -70,4 +71,5 @@ async def on_message(message):
 
 
 # Conecta o bot ao Discord
+keep_alive()
 client.run(TOKEN)
