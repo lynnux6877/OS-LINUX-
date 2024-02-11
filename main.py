@@ -56,6 +56,12 @@ async def on_message(message):
     # Verifica se a mensagem foi enviada por um bot para evitar loops
     if message.author.bot:
         return
+
+  # Verifica se o autor da mensagem tem o ID desejado
+    allowed_user_id = "845806141127655454"  # Substitua pelo ID desejado
+    if str(message.author.id) != allowed_user_id:
+        return
+      
     async with message.channel.typing():
         # Verifica se a mensagem menciona o nome do bot
         if BOT_NAME.lower() in message.content.lower():
